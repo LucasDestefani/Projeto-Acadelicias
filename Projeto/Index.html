@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acadelícias - Doces Fit e Saborosos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilo para a fonte do título e corpo do texto */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA; /* Cor de fundo clara e moderna */
+        }
+        /* Estilo para a barra de rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Efeito de hover nos cards de produtos */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px 5px rgba(255, 105, 180, 0.6);
+        }
+        /* Estilo personalizado para o botão de enviar */
+        .form-button {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .form-button:hover {
+            transform: translateY(-2px);
+            background-color: #d11270;
+        }
+        /* Estilo do SVG do logo */
+        .acadelicias-logo {
+            width: 48px;
+            height: 48px;
+        }
+        .main-button {
+            background-color: #FF69B4;
+        }
+        .main-button:hover {
+            background-color: #f63c9b;
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- Seção do Header (Cabeçalho) -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo da Acadelícias -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="Logo sem nome.png" alt="Logo da Acadelícias, com um donut e uma caneca com desenho de haltere e coração" class="h-12 w-auto">
+                <img src="Nome 2.jpg" alt="Logotipo escrito Acadelícias" class="h-8 w-auto">
+            </a>
+
+            <!-- Menu de Navegação -->
+            <ul class="hidden md:flex space-x-12 text-lg font-medium text-pink-700">
+                <li><a href="#home" class="hover:text-pink-500 transition-colors duration-300">Início</a></li>
+                <li><a href="#menu" class="hover:text-pink-500 transition-colors duration-300">Cardápio</a></li>
+                <li><a href="#team" class="hover:text-pink-500 transition-colors duration-300">Equipe</a></li>
+                <li><a href="#contact" class="hover:text-pink-500 transition-colors duration-300">Contato</a></li>
+            </ul>
+
+            <!-- Botão do menu mobile -->
+            <div class="md:hidden">
+                <button id="menu-button" class="text-2xl text-pink-700 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menu dropdown para mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <ul class="flex flex-col items-center space-y-4 text-lg">
+                <li><a href="#home" class="hover:text-pink-500 transition-colors duration-300">Início</a></li>
+                <li><a href="#menu" class="hover:text-pink-500 transition-colors duration-300">Cardápio</a></li>
+                <li><a href="#team" class="hover:text-pink-500 transition-colors duration-300">Equipe</a></li>
+                <li><a href="#contact" class="hover:text-pink-500 transition-colors duration-300">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Seção Home (principal) com fundo de cor sólida -->
+    <main>
+        <section id="home" class="relative h-[80vh] flex items-center justify-center text-center p-6" style="background-color: #FBCFE8;">
+            <div class="relative z-10 text-gray-800 max-w-2xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-wide leading-tight drop-shadow-lg text-pink-800">Sabor e energia a cada mordida!</h1>
+                <p class="mt-4 text-lg md:text-xl drop-shadow-md">Descubra nossa linha de doces fitness, feitos com ingredientes selecionados para sua saúde e prazer.</p>
+                <a href="#menu" class="mt-8 inline-block main-button text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-colors duration-300">
+                    Explore Nossa Seleção
+                </a>
+            </div>
+        </section>
+
+        <!-- Efeito de transição de cor -->
+        <div class="w-full h-32" style="background: linear-gradient(to bottom, #FBCFE8, #ffffff);"></div>
+
+        <!-- Seção de Cardápio -->
+        <section id="menu" class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-pink-800 mb-4">Nossa Seleção</h2>
+                <p class="text-center text-lg max-w-3xl mx-auto mb-12">Doces com whey protein, menos açúcar e gordura, sem abrir mão do sabor.</p>
+                
+                <!-- Grid de Produtos -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12">
+                    <!-- Produto 1: Brownie -->
+                    <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-center">
+                        <img src="https://receitadaboa.com.br/wp-content/uploads/2024/12/iStock-168731372.jpg" alt="Brownie Proteico" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Brownie Proteico</h3>
+                        <p class="text-gray-600 mb-2">Feito com whey protein, cacau 100% e adoçante natural.</p>
+                        <span class="text-pink-800 font-bold text-xl">R$ 15,00</span>
+                    </div>
+
+                    <!-- Produto 2: Donut Proteico -->
+                    <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-center">
+                        <img src="https://www.biotona.be/wp-content/uploads/chocolate-protein-donuts-1_21a3105e022e02253cbccd2da142414b_2000.jpg" alt="Donut Proteico" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Donut Proteico</h3>
+                        <p class="text-gray-600 mb-2">Coberto com chocolate 70% cacau. Massa feita com aveia e whey protein, com 20 gramas de proteina por unidade.</p>
+                        <span class="text-pink-800 font-bold text-xl">R$ 12,00</span>
+                    </div>
+
+                    <!-- Produto 3: Cookie de Whey -->
+                    <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-center">
+                        <img src="https://www.benescookies.com.br/cdn/shop/files/2022_whey.png?v=1737141498" alt="Cookie de Whey" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Cookie de Whey</h3>
+                        <p class="text-gray-600 mb-2">Feito com chocolate 70%, rico em fibras e proteinas, com 18 gramas de proteina por unidade.</p>
+                        <span class="text-pink-800 font-bold text-xl">R$ 9,00</span>
+                    </div>
+
+                    <!-- Produto 4: Trufas Fit -->
+                    <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-center">
+                        <img src="data:image/jpeg;base64,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" alt="Trufas Fit" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Trufas Fit</h3>
+                        <p class="text-gray-600 mb-2">Bombom recheado com pasta de amendoim e whey, coberto por chocolate meio amargo, com 8 gramas de proteina por trufa.</p>
+                        <span class="text-pink-800 font-bold text-xl">R$ 7,00</span>
+                    </div>
+
+                    <!-- Produto 5: Brigadeiro Proteico -->
+                    <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-center">
+                        <img src="https://selvs.com.br/cdn/shop/articles/felippe-lopes-PcU475vki3Q-unsplash_cc103840-5274-4f2d-acf8-532921fd7807.jpg?v=1749583206" alt="Brigadeiro Proteico" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Brigadeiro Proteico</h3>
+                        <p class="text-gray-600 mb-2">Feito sem leite condensado, sua massa contem whey, cacau, e adoçante natural, envolto por granulados de chocolate até 70%, contendo 10 gramas de proteina por unidade.</p>
+                        <span class="text-pink-800 font-bold text-xl">R$ 5,00</span>
+                    </div>
+
+                    <!-- Produto 6: Cookie de Aveia -->
+                    <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyVYTGHiGx-PDEHRPFpVxKfdYs-renPlfyA&s" alt="Cookie de Aveia" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Cookie de Aveia</h3>
+                        <p class="text-gray-600 mb-2">Crocrante e nutritivo, com gotas de chocolate 70% cacau.</p>
+                        <span class="text-pink-800 font-bold text-xl">R$ 6,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Efeito de transição de cor -->
+        <div class="w-full h-32" style="background: linear-gradient(to bottom, #ffffff, #FBCFE8);"></div>
+
+        <!-- Nova Seção: Onde Ficamos -->
+        <section id="location" class="py-24" style="background-color: #FBCFE8;">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-pink-800 mb-8">Onde Ficamos</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Informações de Endereço -->
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h3 class="text-2xl font-semibold mb-4 text-pink-700">Visite Nossa Loja Física!</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Nossa loja fica localizada perto das maiores academias da região, para que você possar aproveitar de nossas delícias logo após o seu treino!
+                        </p>
+                        <p class="mt-4 text-lg font-medium text-gray-800">
+                            Rua das Delícias, 123<br>
+                            Bairro Fit<br>
+                            São Paulo, SP, 01234-567
+                        </p>
+                    </div>
+                    <!-- Google Maps Iframe -->
+                    <div class="md:w-1/2 w-full">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.3533137103905!2d-47.10652322396099!3d-22.974031779207838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c90043c5f25b%3A0x8f808d31a6163bf9!2sItatinga!5e0!3m2!1spt-BR!2sbr!4v1756576475583!5m2!1spt-BR!2sbr"
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-xl shadow-lg">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Efeito de transição de cor -->
+        <div class="w-full h-32" style="background: linear-gradient(to bottom, #FBCFE8, #FDF2F8);"></div>
+        
+        <!-- Seção Conheça nossa Equipe -->
+        <section id="team" class="py-16 bg-pink-50">
+            <div class="container mx-auto px-6 max-w-2xl text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-pink-800 mb-8">Conheça nossa Equipe</h2>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+                    <!-- Membro 1: Felipe Azanha -->
+                    <div class="flex flex-col items-center">
+                        <img src="Felipe.jpeg" alt="Foto de Felipe Azanha" class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg">
+                        <h3 class="text-xl font-semibold">Felipe Azanha</h3>
+                        <p class="text-gray-600">Idealizador da marca</p>
+                    </div>
+                    <!-- Membro 2: Larissa Nunes -->
+                    <div class="flex flex-col items-center">
+                        <img src="Larissa.jpeg" alt="Foto de Larissa Nunes" class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg">
+                        <h3 class="text-xl font-semibold">Larissa Nunes</h3>
+                        <p class="text-gray-600">Idealizador da marca</p>
+                    </div>
+                    <!-- Membro 3: Laís Rosa -->
+                    <div class="flex flex-col items-center">
+                        <img src="Lais.jpeg" alt="Foto de Laís Rosa" class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg">
+                        <h3 class="text-xl font-semibold">Laís Rosa</h3>
+                        <p class="text-gray-600">Idealizador da marca</p>
+                    </div>
+                    <!-- Membro 4: Lucas Santos -->
+                    <div class="flex flex-col items-center">
+                        <img src="Eu.jpeg" alt="Foto de Lucas Santos" class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg">
+                        <h3 class="text-xl font-semibold">Lucas Santos</h3>
+                        <p class="text-gray-600">Idealizador da marca</p>
+                    </div>
+                    <!-- Membro 5: Giovanna Longuini -->
+                    <div class="flex flex-col items-center">
+                        <img src="Giovanna.jpeg" alt="Foto de Giovanna Longuini" class="w-36 h-36 rounded-full object-cover mb-4 shadow-lg">
+                        <h3 class="text-xl font-semibold">Giovanna Longuini</h3>
+                        <p class="text-gray-600">Idealizador da marca</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção de Contato -->
+        <section id="contact" class="py-16 bg-pink-100">
+            <div class="container mx-auto px-6 max-w-2xl text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-pink-800 mb-4">Fale Conosco</h2>
+                <p class="text-lg mb-8">
+                    Tem alguma dúvida, sugestão ou quer fazer um pedido? Preencha o formulário abaixo e entraremos em contato.
+                </p>
+                
+                <!-- Formulário de Contato -->
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Seu Nome Completo" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400">
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Seu Melhor E-mail" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400">
+                    </div>
+                    <div>
+                        <textarea id="message" name="message" rows="6" placeholder="Sua Mensagem" class="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 main-button text-white font-bold rounded-xl shadow-lg form-button">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- Seção do Footer (Rodapé) -->
+    <footer class="bg-pink-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <!-- Nome/Logo no rodapé -->
+                <h3 class="text-3xl font-bold mb-4 md:mb-0">Acadelícias</h3>
+
+                <!-- Links de Redes Sociais -->
+                <div class="flex space-x-6 text-2xl">
+                    <a href="#" class="hover:text-gray-300 transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gray-300 transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-gray-300 transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <hr class="border-t border-pink-700 mb-6">
+            
+            <p class="text-sm">&copy; 2024 Acadelícias. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para o menu mobile -->
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
